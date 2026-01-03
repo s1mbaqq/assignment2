@@ -34,19 +34,19 @@ abstract class Vehicle {
 
     public void setModel(String model) {
         if (model == null || model.isEmpty()){
-            throw new IllegalArgumentException("Model mustn't be null or empty!");
+            throw new IllegalArgumentException("Model must not be null or empty!");
         };
         this.model = model;
     }
     public void setYear(int year) {
-        if (year < 1885 || year > 2026){
-            throw new IllegalArgumentException("The car was not produced that year!");
+        if (year < 1990 || year > 2026){
+            throw new IllegalArgumentException("No cars produced that year!");
         };
         this.year = year;
     }
     public void setBasePrice(double basePrice) {
         if (basePrice < 0){
-            throw new IllegalArgumentException("The price of a car cannot be negative!");
+            throw new IllegalArgumentException("The price of a car can't be negative!");
         };
         this.basePrice = basePrice;
     }
