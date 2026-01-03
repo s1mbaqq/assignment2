@@ -142,7 +142,7 @@ class Bus extends Vehicle implements Servicable {
 
 public class Main {
     public static void main (String[] args) {
-        Servicable car1 = new Car("Audi", 2023, 70000000, 4);
+        Servicable car1 = new Car("BMW", 2020, 70000000, 4);
         car1.performService();
         System.out.println("The mileage of this car is: " + car1.getServiceIntervalKm());
     }
