@@ -219,11 +219,11 @@ class FleetApp {
         System.out.print("Base price of the bus");
         int basePrice = scanner.nextInt();
 
-        System.out.print("Passenger capacity: ");
+        System.out.print("Maximum seats for passengers: ");
         int passCapacity = scanner.nextInt();
 
         vehicles.add(new Bus(model, year, basePrice, passCapacity));
-        System.out.println("The Bus has been added to the fleet!");
+        System.out.println("The Bus has been succesfully added to the fleet!");
     }
 
 
