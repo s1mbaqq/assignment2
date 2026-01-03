@@ -36,7 +36,7 @@ abstract class Vehicle {
         this.model = model;
     }
     public void setYear(int year) {
-        if (year < 1885 || year > 2026){
+        if (year < 1990 || year > 2026){
             throw new IllegalArgumentException("No cars was produced that year!");
         };
         this.year = year;
