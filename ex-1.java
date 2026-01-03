@@ -37,13 +37,13 @@ abstract class Vehicle {
     }
     public void setYear(int year) {
         if (year < 1885 || year > 2026){
-            throw new IllegalArgumentException("The car was not produced that year!");
+            throw new IllegalArgumentException("No cars was produced that year!");
         };
         this.year = year;
     }
     public void setBasePrice(double basePrice) {
         if (basePrice < 0){
-            throw new IllegalArgumentException("The price of a car cannot be negative!");
+            throw new IllegalArgumentException("The price of a car can't be negative!");
         };
         this.basePrice = basePrice;
     }
@@ -69,10 +69,10 @@ class Car extends Vehicle {
     @Override
     public double calculateInsuranceFee() {
         double fee;
-        if (basePrice <= 5000000){
+        if (basePrice <= 4000000){
             fee = basePrice * 0.05;
         }
-        else if (basePrice > 5000000 && basePrice <= 15000000) {
+        else if (basePrice > 4000000 && basePrice <= 13000000) {
             fee = basePrice * 0.08;
         }
         else {
@@ -103,7 +103,7 @@ class Bus extends Vehicle {
         if (basePrice <= 10000000) {
             fee = basePrice * 0.1;
         }
-        else if (basePrice <= 30000000) {
+        else if (basePrice <= 41000000) {
             fee = basePrice * 0.15;
         }
         else {
@@ -122,28 +122,28 @@ class Bus extends Vehicle {
 
 public class Main {
     public static void main (String[] args) {
-        Car car1 = new Car("AUDI", 2023, 70000000, 4);
+        Car car1 = new Car("BMW", 2020, 70000000, 4);
         System.out.println(car1.toString());
         System.out.println("Vehicle age: " + car1.getAge(2026));
         System.out.println("Insurance fee: " + car1.calculateInsuranceFee());
 
         System.out.println("------------------------------------------------");
 
-        Car car2 = new Car("Mercedes", 2005, 1500000, 4);
+        Car car2 = new Car("Volkswagen", 2001, 2500000, 4);
         System.out.println(car2.toString());
         System.out.println("Vehicle age: " + car2.getAge(2026));
         System.out.println("Insurance fee: " + car2.calculateInsuranceFee());
 
         System.out.println("------------------------------------------------");
 
-        Bus bus1 = new Bus("Yutong", 2020, 40000000, 36);
+        Bus bus1 = new Bus("Yutong", 2012, 40000000, 36);
         System.out.println(bus1.toString());
         System.out.println("Vehicle age: " + bus1.getAge(2026));
         System.out.println("Insurance fee: " + bus1.calculateInsuranceFee());
 
         System.out.println("------------------------------------------------");
 
-        Bus bus2 = new Bus("LE60", 2008, 15000000, 32);
+        Bus bus2 = new Bus("Hyundai Motor", 2010, 25000000, 32);
         System.out.println(bus2.toString());
         System.out.println("Vehicle age: " + bus2.getAge(2026));
         System.out.println("Insurance fee: " + bus2.calculateInsuranceFee());
